@@ -1,0 +1,82 @@
+@import "variables";
+
+.title {
+  height: 40px;
+  color: $color-grey-very-dark;
+  .filter-title {
+    margin: 0;
+    font-size: 18px;
+  }
+  .mat-icon {
+    font-size: 16px;
+    margin-right: 8px;
+    transform: scaleX(-1);
+    position: relative;
+    top: 3px;
+  }
+  .filter-item {
+    font-size: 14px;
+    div {
+      padding: 11px 20px;
+      border: 1px solid #dae2f1;
+      border-radius: 6px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+:host {
+  .mat-table {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 12px 20px 0 rgba(5, 61, 161, 0.05);
+    .mat-header-cell {
+      font-family: $font-bold;
+      color: $color-dark-blue;
+    }
+    .mat-cell {
+      font-family: $font-normal;
+      font-size: 14px;
+      color: $color-grey-very-dark;
+      .status {
+        display: inline-block;
+        background-color: $color-magenta-pink;
+        padding: 7px 20px;
+        border-radius: 6px;
+      }
+      .sum {
+        padding: 2px 6px;
+        font-family: $font-semi-bold;
+        margin: 2px;
+        background-color: $color-labender-pink;
+        border-radius: 50%;
+      }
+      .wlid {
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 5px;
+      }
+      .sum-zero {
+        background-color: transparent;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.pinkcircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid $color-pink;
+  background-color: $color-shadow-pink;
+  display: inline-block;
+  margin-right: 26px;
+}
+.pinkicon {
+  width: 16px;
+  color: $color-pink;
+  margin-right: 19px;
+}

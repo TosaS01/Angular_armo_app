@@ -1,0 +1,19 @@
+.mat-checkbox-frame {
+  border-width: 1px !important;
+}
+
+.mat-checkbox .mat-checkbox-frame {
+  border-color: $color-blue;
+  background-color: $color-white;
+}
+
+.mat-checkbox-checked {
+  .mat-checkbox-background {
+    background-color: $color-white !important;
+    margin: 1px;
+  }
+}
+
+.mat-checkbox-checkmark-path {
+  stroke: $color-blue !important;
+}

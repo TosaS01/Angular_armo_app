@@ -1,0 +1,63 @@
+@import 'variables';
+
+.mat-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  top: 10px;
+  left: 10px;
+}
+
+.section-col {
+  width: 160px;
+  margin-right: 18px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.section-card {
+  width: 160px;
+  height: 60px;
+  background-color: #f2f4fa;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-bottom: 15px;
+  color: $color-blue;
+  font-size: 11px;
+  font-family: $font-bold;
+}
+
+.control-card {
+  height: 90px;
+  width: 160px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.section-card,
+.control-card {
+  & > span {
+    word-break: break-all;
+  }
+}
+
+.failed-resources-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  height: 20px;
+  min-width: 20px;
+  font-size: 11px;
+  color: $color-pink;
+  border: 1px solid $color-pink;
+  border-radius: 3px;
+  background-color: $color-light-pink;
+  text-align: center;
+  line-height: 20px;
+  font-family: $font-bold;
+}

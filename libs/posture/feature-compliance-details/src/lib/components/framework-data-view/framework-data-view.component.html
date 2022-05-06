@@ -1,0 +1,56 @@
+<ng-container
+  *ngTemplateOutlet="
+    viewBy;
+    context: {
+      total: { controlsTotal: controlsTotal, resourcesTotal: resourcesTotal }
+    }
+  "
+></ng-container>
+<ng-container [ngSwitch]="frameworkDataViewType">
+  <armo-framework-controls-table
+    *ngSwitchCase="frameworkDataViewTypeEnum.Controls"
+    [controls]="controls"
+  ></armo-framework-controls-table>
+  <armo-framework-control-map
+    *ngSwitchCase="frameworkDataViewTypeEnum.Map"
+    [controls]="controls"
+  ></armo-framework-control-map>
+  <armo-framework-resources-table
+    *ngSwitchCase="frameworkDataViewTypeEnum.Resources"
+    [resources]="resources"
+    (changeResourceKind)="onChangeResourceKind($event)"
+  ></armo-framework-resources-table>
+</ng-container>
+
+<ng-template #viewBy let-total="total">
+  <div class="d-flex align-items-center pl-2 py-4">
+    <span class="color-gray mr-2 uppercase">view by:</span>
+    <mat-button-toggle-group
+      [value]="frameworkDataViewTypeEnum.Controls"
+      (change)="onDataViewChange($event)"
+    >
+      <mat-button-toggle
+        [disableRipple]="true"
+        [value]="frameworkDataViewTypeEnum.Controls"
+      >
+        Controls
+        <span *ngIf="!!total?.controlsTotal">({{ total?.controlsTotal }})</span>
+      </mat-button-toggle>
+      <mat-button-toggle
+        [disableRipple]="true"
+        [value]="frameworkDataViewTypeEnum.Map"
+      >
+        Control Map
+      </mat-button-toggle>
+      <mat-button-toggle
+        [disableRipple]="true"
+        [value]="frameworkDataViewTypeEnum.Resources"
+      >
+        Resources
+        <span *ngIf="!!total?.resourcesTotal"
+          >({{ total?.resourcesTotal }})</span
+        >
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</ng-template>

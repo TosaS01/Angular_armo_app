@@ -1,0 +1,27 @@
+@import 'variables';
+
+:host {
+  td.mat-column-resourceKind {
+    width: 48px;
+  }
+}
+
+::ng-deep {
+  .resource-kind-menu {
+    .mat-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .mat-menu-item {
+      &:hover {
+        color: $color-blue;
+        font-weight: bold;
+
+        .mat-icon {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "variables";
+
+.base-menu-trigger-btn.mat-button {
+  width: 160px;
+  border-radius: 0;
+  height: 35px;
+  border-bottom: 1px solid $color-grey-light;
+  text-align: left;
+
+  &:hover {
+    border-color: #bbbcbc;
+  }
+
+  &.is-trigger-active {
+    border-bottom: 1px solid $color-blue;
+  }
+
+  .mat-button-focus-overlay {
+    display: none;
+  }
+}
+
+.mat-menu-panel {
+  border-radius: 0 !important;
+  font-family: OpenSans;
+
+  .mat-menu-item {
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+::ng-deep {
+  .base-context-menu-panel {
+    width: 160px;
+    border: 1px solid $color-grey-little;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+
+    .mat-menu-item {
+      font-size: 12px;
+
+      &:hover {
+        font-family: $font-semi-bold;
+        background: #F6F6F6;
+      }
+    }
+  }
+}

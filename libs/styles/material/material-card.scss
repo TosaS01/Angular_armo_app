@@ -1,0 +1,28 @@
+@import "variables";
+
+.mat-card {
+  background: white;
+  border: 1px solid $color-grey-little;
+
+  &:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+  }
+}
+
+.mat-card-header {
+  font-weight: 600;
+
+  .mat-card-header-text {
+    margin: 0;
+  }
+
+  .mat-card-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.mat-card-content {
+  font-size: 12px;
+}
+

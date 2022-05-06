@@ -1,0 +1,8 @@
+:host {
+  & > div {
+    height: 24px;
+    width: 24px;
+    border-radius: 8px;
+    background-color: #DFE5F3;
+  }
+}

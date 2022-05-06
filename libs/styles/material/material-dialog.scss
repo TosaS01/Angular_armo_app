@@ -1,0 +1,57 @@
+@import "variables";
+
+.mat-dialog-container {
+  border-radius: 0 !important;
+}
+
+.no-padding-dialog {
+  .mat-dialog-container {
+    padding: 0;
+  }
+}
+
+.base-dialog {
+  .mat-dialog-container {
+    padding: 0;
+    border: 1px solid $color-grey-little;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.06);
+  }
+}
+
+.full-size-dialog {
+  .mat-dialog-container {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &.with-opacity {
+    .mat-dialog-container {
+      background: transparent;
+    }
+  }
+}
+
+
+
+.ml-auto-dialog {
+  margin-left: auto;
+
+  .mat-dialog-container {
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+.half-screen-dialog {
+  .mat-dialog-container {
+    padding: 0;
+    border-radius: 0;
+    border: 1px solid $color-grey-little;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.06);
+  }
+}
+
+div.mat-dialog-actions {
+  min-height: 32px;
+  margin-bottom: 0;
+}

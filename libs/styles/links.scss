@@ -1,0 +1,16 @@
+@import "variables";
+
+.base-link, .base-link:active, .base-link:visited, .base-link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.primary-link, .primary-link:active, .primary-link:visited, .primary-link:hover {
+  font-family: $font-semi-bold;
+  text-decoration: none;
+  color: $color-blue;
+}
+
+.navigation-link {
+  text-decoration: none;
+}

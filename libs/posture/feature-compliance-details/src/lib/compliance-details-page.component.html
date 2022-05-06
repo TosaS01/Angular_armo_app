@@ -1,0 +1,26 @@
+<armo-page-header [pageTitle]="'Compliance'"
+                  [showBackButton]="true">
+  <armo-cluster-summary-info [clusterName]="clusterName"></armo-cluster-summary-info>
+</armo-page-header>
+<armo-last-run [lastRunDate]="(scanSummaryFacade.summary$ | async)?.lastRun"
+               (runScan)="runScan()">
+</armo-last-run>
+<div class="d-flex">
+  <armo-score-tiles-list class="w-50"
+                         [tiles]="frameworkScanScoresFacade.scanScores$ | async">
+  </armo-score-tiles-list>
+  <div class="w-50">
+    <armo-overtime-chart class="d-block w-100"
+                         [chartTitle]="'Posture Overtime'"
+                         [data]="clustersOvertimeFacade.selectedClusterOvertime$ | async"></armo-overtime-chart>
+  </div>
+</div>
+<armo-framework-tabs-group
+  [frameworks]="postureFacade.frameworks$ | async"
+  [controls]="frameworkControlsFacade.frameworkControls$ | async"
+  [resources]="frameworkResourcesFacade.frameworkResources$ | async"
+  [controlsTotal]="frameworkControlsFacade.frameworkControlsTotal$ | async"
+  [resourcesTotal]="frameworkResourcesFacade.frameworkResourcesTotal$ | async"
+  (selectFramework)="onSelectFramework($event)"
+  (changeResourceKind)="onChangeResourceKind($event)"
+></armo-framework-tabs-group>

@@ -1,0 +1,15 @@
+<div class="d-flex align-items-center">
+  <armo-filter-dropdown class="mr-4"
+                        [title]="'Clusters/Data-Centers'"
+                        [items]="filtersFacade.activePrimaryFilters$ | async"
+                        [selectedItems]="filtersFacade.selectedPrimaryFilters$ | async"
+                        (select)="filtersFacade.selectFilter($event)"
+  ></armo-filter-dropdown>
+  <armo-filter-dropdown class="mr-4"
+                        [title]="'Namespaces/Projects'"
+                        [items]="filtersFacade.activeSecondaryFilters$ | async"
+                        [selectedItems]="filtersFacade.selectedSecondaryFilters$ | async"
+                        (select)="filtersFacade.selectFilter($event)"
+  ></armo-filter-dropdown>
+  <button mat-button (click)="filtersFacade.clearSelection()">Clear Selection</button>
+</div>

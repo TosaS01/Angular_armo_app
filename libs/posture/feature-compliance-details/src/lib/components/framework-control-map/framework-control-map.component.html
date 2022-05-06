@@ -1,0 +1,31 @@
+<div class="d-flex">
+  <ng-container *ngFor="let section of sections | keyvalue">
+    <div class="section-col">
+      <div class="section-card d-flex align-items-center uppercase">
+        <span class="w-100 text-center px-2">{{ section.key }}</span>
+      </div>
+      <ng-container *ngFor="let control of section.value">
+        <div class="control-card position-relative d-flex align-items-center">
+          <mat-icon
+            class="status-icon color-spring-green"
+            *ngIf="isPassed(control)"
+            >check_circle_outline</mat-icon
+          >
+          <mat-icon class="status-icon color-pink" *ngIf="isWarning(control)"
+            >warning</mat-icon
+          >
+          <span
+            class="failed-resources-badge"
+            *ngIf="isBadgeVisible(control)"
+            >{{ control.affectedResourcesCount }}</span
+          >
+          <span
+            class="w-100 text-center px-4 truncate"
+            [matTooltip]="control.name"
+            >{{ control.name }}</span
+          >
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

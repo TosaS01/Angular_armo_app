@@ -1,0 +1,15 @@
+@import 'variables';
+
+:host {
+  width: $nav-menu-collapsed-width;
+  color: #fff;
+  background-color: $color-blue;
+
+  &.expanded {
+    width: $nav-menu-expanded-width;
+  }
+}
+
+.side-nav {
+  background-color: $color-blue;
+}

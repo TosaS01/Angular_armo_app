@@ -1,0 +1,78 @@
+@import 'variables';
+
+.base-button {
+  &.mat-flat-button {
+    border-radius: 2px;
+  }
+
+  &.mat-stroked-button {
+    border-radius: 4px;
+    transition: background-color .3s ease-out;
+    background: white;
+    border-color: #E3E5E9;
+
+    &:not([disabled]):hover {
+      background-color: #F8F8FA;
+      border-color: #A4A4A4;;
+    }
+  }
+
+  &.mat-flat-button, &.mat-stroked-button {
+    height: 32px;
+    min-width: 32px;
+    line-height: 24px;
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.mat-flat-button.mat-primary {
+  &:hover {
+    background-color: $color-blue-hovered;
+    transition: background-color .3s ease-out;
+  }
+
+  &:active {
+    background-color: $color-blue-active;
+    transition: background-color .3s ease-out;
+  }
+
+  &:disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: $color-blue-disabled;
+    color: white;
+  }
+
+  .mat-button-focus-overlay {
+    display: none;
+  }
+}
+
+.mat-stroked-button:not([disabled]) {
+  .mat-button-focus-overlay {
+    display: none;
+  }
+}
+
+.mat-stroked-button.download-button {
+  height: 24px;
+  font-size: 11px;
+  line-height: 22px;
+  font-family: $font-normal;
+  font-weight: 600;
+  padding: 0 64px;
+
+  &:not([disabled]) {
+    border-color: $color-blue;
+    color: $color-blue;
+  }
+}
+
+.mat-stroked-button.mat-button-disabled.mat-button-disabled {
+  color: $color-blue;
+  opacity: .26;
+  cursor: not-allowed;
+}

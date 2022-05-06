@@ -1,0 +1,26 @@
+<div class="d-flex w-100 h-100 main-container">
+  <armo-side-nav-menu></armo-side-nav-menu>
+  <div class="d-flex flex-column w-100">
+    <armo-header class="d-flex flex-row px-4 align-items-center">
+      <armo-scope-filter class="flex-grow-1"></armo-scope-filter>
+      <armo-top-nav-menu class="mr-4"></armo-top-nav-menu>
+      <armo-user-menu
+        [customers]="customersFacade.customers$ | async"
+        [selectedCustomerGuid]="customersFacade.selectedCustomer$ | async"
+        (select)="customersFacade.setCustomer($event)"
+        (logout)="logout()">
+      </armo-user-menu>
+    </armo-header>
+    <ng-container>
+      <div class="page-content p-4">
+        <router-outlet></router-outlet>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+
+
+
+

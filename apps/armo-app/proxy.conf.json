@@ -1,0 +1,18 @@
+{
+  "/": {
+    "target": "http://localhost:3333",
+    "secure": false
+  },
+  "/api": {
+    "target": "http://localhost:3333",
+    "secure": false
+  },
+  "/gateways": {
+    "target": "http://localhost:3333",
+    "secure": false,
+    "pathRewrite": {
+      "^/gateways/external/orgsuite/api": "/api",
+      "^/gateways/external/orgsuite/": "/"
+    }
+  }
+}

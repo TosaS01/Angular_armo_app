@@ -1,0 +1,37 @@
+@import 'material-palette';
+@import '~@angular/material/theming';
+
+$armo-app-typography: mat-typography-config(
+  $font-family:   'OpenSans, "Helvetica Neue", Helvetica, Arial, sans-serif',
+  $display-2:     mat-typography-level(34px, 40px, 400, 'OpenSans-Bold'),       // .mat-display-2
+  $display-1:     mat-typography-level(28px, 36px, 400, 'OpenSans-Bold'),       // .mat-display-1
+  $headline:      mat-typography-level(24px, 32px, 400, 'OpenSans-Bold'),       // .mat-h1
+  $title:         mat-typography-level(20px, 28px, 400, 'OpenSans-Bold'),       // .mat-h2
+  $subheading-2:  mat-typography-level(16px, 24px, 400, 'OpenSans-Bold'),       // .mat-h3
+  $subheading-1:  mat-typography-level(16px, 24px, 400, 'OpenSans-SemiBold'),   // .mat-h4
+  $body-2:        mat-typography-level(14px, 20px, 400, 'OpenSans-SemiBold'),   // .mat-body-strong
+  $body-1:        mat-typography-level(14px, 20px, 400, 'OpenSans'),            // .mat-body
+  $caption:       mat-typography-level(12px, 16px, 400, 'OpenSans-Bold'),       // .mat-small
+  $button:        mat-typography-level(14px, 24px, 400, 'OpenSans-SemiBold'),   // .mat-button
+  $input:         mat-typography-level(14px, 2, 400, 'OpenSans-SemiBold')
+);
+
+@include mat-core($armo-app-typography);
+
+$armo-app-primary: mat-palette($mat-armo-blue);
+$armo-app-accent: mat-palette($mat-armo-blue);
+$armo-app-warn: mat-palette($mat-deep-orange);
+
+$armo-app-theme: mat-light-theme($armo-app-primary, $armo-app-accent, $armo-app-warn);
+
+@include angular-material-theme($armo-app-theme);
+
+.mat-typography {
+  .mat-h1, .mat-h2, .mat-h3, .mat-h4, h1, h2, h3, h4, h5 {
+    margin: 0;
+  }
+}
+
+.mat-drawer-container {
+  color: black;
+}

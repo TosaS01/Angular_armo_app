@@ -1,0 +1,33 @@
+.mat-radio-button {
+  &.mat-radio-checked .mat-radio-outer-circle {
+    border-width: 6px;
+  }
+
+  .mat-radio-outer-circle {
+    transition: border-color ease 280ms, border-width 280ms;
+  }
+
+  .mat-radio-inner-circle {
+    display: none;
+  }
+
+  .mat-radio-ripple {
+    display: none;
+  }
+
+  &.base-radio {
+    &.mat-radio-checked .mat-radio-outer-circle {
+      border-width: 5px;
+    }
+
+    .mat-radio-container {
+      width: 16px;
+      height: 16px;
+    }
+
+    .mat-radio-outer-circle {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

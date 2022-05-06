@@ -1,0 +1,37 @@
+<ul class="side-nav-items">
+  <ng-container *ngFor="let navItem of navItems">
+    <ng-container *ngIf="!!navItem.url">
+      <li class="d-flex align-items-center px-4 pointer"
+          *ngIf="isVisible(navItem)"
+          [routerLink]="navItem.url"
+          routerLinkActive="active">
+        <a class="d-flex align-items-center">
+          <mat-icon
+            *ngIf="!!navItem.icon"
+            class="mr-3"
+            [matTooltip]="navItem.name">{{ navItem.icon }}</mat-icon>
+          <span *ngIf="isMenuExpanded"
+                [class]="{ 'sub-item': isChild(navItem), 'bold': !isChild(navItem) }">
+            {{ isChild(navItem) ? navItem.name : (navItem.name | uppercase) }}
+          </span>
+        </a>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="!navItem.url">
+      <li class="d-flex align-items-center px-4 pointer"
+          (click)="toggleNavMenuItem(navItem)">
+        <a class="d-flex align-items-center">
+          <mat-icon
+            *ngIf="!!navItem.icon"
+            class="mr-3"
+            [matTooltip]="navItem.name">{{ navItem.icon }}</mat-icon>
+          <span
+            *ngIf="isMenuExpanded"
+            [class]="{ 'bold': !isChild(navItem) }">
+            {{ navItem.name | uppercase }}
+          </span>
+        </a>
+      </li>
+    </ng-container>
+  </ng-container>
+</ul>

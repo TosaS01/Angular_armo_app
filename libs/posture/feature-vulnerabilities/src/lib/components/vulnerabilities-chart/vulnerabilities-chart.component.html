@@ -1,0 +1,40 @@
+<div class="overtime-chart">
+  <div class="title mb-3">
+    <div class="float-left semi-bold">Vulnerabilites Overtime</div> 
+    <div class="float-right d-flex toggle-item font-normal">         
+      Show vulnerabilities older than 
+      <a href="" class="pl-1">company policy</a>
+      <mat-slide-toggle [checked]="false" class="toggle-btn"></mat-slide-toggle>            
+    </div>   
+  </div>
+  <div class="content">
+    <div class="mark">
+      <span class="font-normal">
+        <label [ngClass]="['circle', getClass(severityEnumText['Critical'])]"></label>
+        Critical 
+        <i class="semi-bold">{{maxArr[severityEnum['Critical']]}}</i>
+      </span>
+      <span class="font-normal">
+        <label [ngClass]="['circle', getClass(severityEnumText['High'])]"></label>
+        High 
+        <i class="semi-bold">{{maxArr[severityEnum['High']]}}</i>
+      </span>
+      <span class="font-normal">
+        <label [ngClass]="['circle', getClass(severityEnumText['Medium'])]"></label>
+        Medium 
+        <i class="semi-bold">{{maxArr[severityEnum['Medium']]}}</i>
+      </span>
+      <span class="font-normal">
+        <label [ngClass]="['circle', getClass(severityEnumText['Low'])]"></label>
+        Low 
+        <i class="semi-bold">{{maxArr[severityEnum['Low']]}}</i>
+      </span>      
+      <mat-form-field>
+        <mat-select [(ngModel)]="selectedPeriod" (selectionChange)="changePeriod($event)">
+          <mat-option *ngFor="let period of periodArr" [value]="period.value">{{period.label}}</mat-option>              
+        </mat-select>
+      </mat-form-field>      
+    </div>    
+    <armo-vulnerability-overtime-chart class="d-block w-100" [data]="(vulnerabilitiesFacade.vulnerabilitiesOvertime$ | async)?.data"></armo-vulnerability-overtime-chart>     
+  </div>  
+</div>

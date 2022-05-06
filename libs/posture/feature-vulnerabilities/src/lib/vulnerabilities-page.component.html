@@ -1,0 +1,14 @@
+<armo-vulnerabilities-notification></armo-vulnerabilities-notification>
+<armo-page-header
+  [pageTitle]="'Workloads with Vulnerabilites'"
+></armo-page-header>
+<armo-last-run
+  [lastRunDate]=""
+>
+</armo-last-run>
+<div class="d-flex my-5">
+  <armo-vulnerabilities-filters class="w-50"></armo-vulnerabilities-filters>
+  <armo-vulnerabilities-chart class="ml-3 w-50"></armo-vulnerabilities-chart>  
+</div>
+<armo-vulnerabilities-table [data]="(vulnerabilitiesFacade.vulnerabilitiesSumsummary$ | async)?.data"></armo-vulnerabilities-table>
+

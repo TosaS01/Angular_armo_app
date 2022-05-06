@@ -1,0 +1,25 @@
+@import 'variables';
+
+.side-nav-items {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    height: 56px;
+
+    &.active {
+      background-color: $color-blue-dark;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.sub-item {
+  margin-left: 40px;
+  font-size: 16px;
+}

@@ -1,0 +1,22 @@
+@import 'variables';
+:host {
+  & > div {
+    height: calc(100vh - 535px);
+    overflow-y: auto;
+  }
+
+  td.mat-column-name {
+    font-family: $font-bold;
+    padding-right: 16px;
+  }
+
+  td.mat-column-affectedResourcesCount {
+    color: $color-pink;
+    font-family: $font-bold;
+  }
+
+  .mat-column-status,
+  .mat-column-name {
+    width: 140px;
+  }
+}

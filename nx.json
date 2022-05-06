@@ -1,0 +1,158 @@
+{
+  "npmScope": "armo",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "ZmQ2NmYwZTAtYjdiMS00MDYxLWIyOTItNjM1OGFlZGNjYzM1fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "armo-app": {
+      "tags": []
+    },
+    "armo-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["armo-app"]
+    },
+    "auth-api": {
+      "tags": []
+    },
+    "auth-data-access": {
+      "tags": []
+    },
+    "auth-feature-login": {
+      "tags": []
+    },
+    "auth-shell": {
+      "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "customers-api": {
+      "tags": []
+    },
+    "customers-data-access": {
+      "tags": []
+    },
+    "customers-domain": {
+      "tags": []
+    },
+    "dashboard-api": {
+      "tags": []
+    },
+    "dashboard-data-access": {
+      "tags": []
+    },
+    "dashboard-domain": {
+      "tags": []
+    },
+    "dashboard-feature-home": {
+      "tags": []
+    },
+    "dashboard-shell": {
+      "tags": []
+    },
+    "filters-api": {
+      "tags": []
+    },
+    "filters-data-access": {
+      "tags": []
+    },
+    "filters-domain": {
+      "tags": []
+    },
+    "filters-shared-ui": {
+      "tags": []
+    },
+    "mock-server": {
+      "tags": ["scope:server", "type:mock"]
+    },
+    "posture-api": {
+      "tags": []
+    },
+    "posture-data-access": {
+      "tags": []
+    },
+    "posture-domain": {
+      "tags": []
+    },
+    "posture-feature-compliance": {
+      "tags": []
+    },
+    "posture-feature-compliance-details": {
+      "tags": []
+    },
+    "posture-feature-overview": {
+      "tags": []
+    },
+    "posture-feature-rbac": {
+      "tags": []
+    },
+    "posture-feature-vce-report": {
+      "tags": []
+    },
+    "posture-feature-vulnerabilities": {
+      "tags": []
+    },
+    "posture-shared-ui": {
+      "tags": []
+    },
+    "posture-shell": {
+      "tags": []
+    },
+    "shared": {
+      "tags": []
+    },
+    "shared-api": {
+      "tags": []
+    },
+    "ui-material": {
+      "tags": []
+    },
+    "util-http": {
+      "tags": []
+    },
+    "workloads-api": {
+      "tags": []
+    },
+    "workloads-data-access": {
+      "tags": []
+    },
+    "workloads-domain": {
+      "tags": []
+    },
+    "workloads-feature-inventory": {
+      "tags": []
+    },
+    "workloads-feature-visualizer": {
+      "tags": []
+    },
+    "workloads-shell": {
+      "tags": []
+    }
+  }
+}

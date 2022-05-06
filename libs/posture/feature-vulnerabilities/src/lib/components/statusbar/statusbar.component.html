@@ -1,0 +1,10 @@
+<div>
+  <span     
+    [ngClass]="['stripe', getStripeClass(severity)]"
+    [ngStyle]="{'width': stripeWidth + 'px', 'height': '13px'}"
+  ></span>
+  <span 
+    [ngClass]="['solid', getClass(severity)]"
+    [ngStyle]="{'width': solidWidth + 'px', 'height': '13px'}"
+  ></span>
+</div>

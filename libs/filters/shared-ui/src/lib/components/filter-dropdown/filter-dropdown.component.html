@@ -1,0 +1,20 @@
+<div class="d-flex align-items-center pointer" [matMenuTriggerFor]="filterMenu">
+  <span class="mr-2 semi-bold font-size-16">{{ title }}</span>
+  <span *ngIf="!!selectedItems?.length" class="d-inline-block selected-filters-badge">
+    {{ selectedItems?.length }}/{{ items?.length }}
+  </span>
+  <mat-icon class="ml-4">keyboard_arrow_down</mat-icon>
+</div>
+
+<mat-menu class="filters-menu" #filterMenu="matMenu" overlapTrigger="false">
+  <ul class="m-0 p-4" (click)="$event.stopPropagation();">
+    <ng-container *ngFor="let item of items">
+      <li class="d-flex align-items-center px-4 pointer"
+          [ngClass]="{'selected': isChecked(item)}">
+        <mat-checkbox class="mr-2"
+                      [checked]="isChecked(item)"
+                      (change)="onSelect(item)">{{ item.extendedName }}</mat-checkbox>
+      </li>
+    </ng-container>
+  </ul>
+</mat-menu>

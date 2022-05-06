@@ -1,0 +1,60 @@
+@import "variables";
+
+.mat-select-panel {
+  border-radius: 0 !important;
+  border: 1px solid $color-grey-little;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12) !important;
+  //margin-top: 30px;  // This option breaks positioning if select opened top
+  margin-left: 14px;
+  min-width: 100% !important;
+
+  &.ui-multiselect,
+  &.groups-multiselect {
+    margin-left: 24px;
+  }
+
+  &.ng-animating {
+    visibility: hidden;
+  }
+}
+
+.mat-select-value-text {
+  font-family: $font-semi-bold;
+}
+
+.mat-select-arrow {
+  font-family: $font-semi-bold;
+  border: none !important;
+
+  &:before {
+    position: relative;
+    content: "";
+    top: -8px;
+    left: -18px;
+  }
+}
+
+.need-show-checkbox {
+  .mat-option-pseudo-checkbox.mat-pseudo-checkbox {
+    display: inline-block;
+  }
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: OpenSans-SemiBold;
+}
+
+.mat-option-pseudo-checkbox.mat-pseudo-checkbox {
+  display: none;
+}
+
+.pseudo-checkboxes .mat-option-pseudo-checkbox.mat-pseudo-checkbox {
+  display: block;
+}
+
+.mat-select.mat-select-disabled {
+  .mat-select-trigger {
+    cursor: not-allowed;
+  }
+}

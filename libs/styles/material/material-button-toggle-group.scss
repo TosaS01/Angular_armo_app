@@ -1,0 +1,32 @@
+.mat-button-toggle-group.mat-button-toggle-group-appearance-standard {
+
+  .mat-button-toggle-appearance-standard {
+    .mat-button-toggle-label-content {
+      padding: 0 32px;
+    }
+  }
+
+  .mat-button-toggle-button {
+    .mat-button-toggle-label-content {
+      color: $color-blue;
+      padding: 0 32px;
+      line-height: 40px;
+    }
+  }
+
+  .mat-button-toggle-checked {
+    .mat-button-toggle-button {
+      background: $color-blue;
+
+      .mat-button-toggle-label-content {
+        color: white;
+        font-family: $font-bold;
+      }
+    }
+  }
+
+  .mat-button-toggle-focus-overlay {
+    display: none;
+  }
+
+}

@@ -1,0 +1,25 @@
+<div class="position-relative">
+  <div class="title mb-3">
+    <div class="float-left filter-title semi-bold">All Serverity ({{total}})</div>
+    <div class="float-right d-flex filter-item font-normal">
+      <div>
+        <mat-icon>build</mat-icon>
+        Have fixes ({{fixedTotal}})
+        <mat-slide-toggle [checked]="true" class="toggle-btn"></mat-slide-toggle>
+      </div>
+      <div>
+        Relevance ({{relevance}})
+        <mat-slide-toggle [checked]="false" class="toggle-btn"></mat-slide-toggle>
+      </div>
+    </div>
+  </div>
+  <div class="content semi-bold">
+    <div *ngFor="let vulnerability of vulnerabilitiesFacade.vulnerabilities$ | async">
+      <armo-vulnerabilities-filter-item   
+        class="d-block"   
+        [vulnerability] = "vulnerability"
+        [max]="max"
+      ></armo-vulnerabilities-filter-item>
+  </div>      
+  </div>
+</div>

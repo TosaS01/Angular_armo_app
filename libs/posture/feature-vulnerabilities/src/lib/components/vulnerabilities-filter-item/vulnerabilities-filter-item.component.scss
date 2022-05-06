@@ -1,0 +1,36 @@
+@import "variables";
+
+.item {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: 1px solid $color-shadow-darken;
+}
+.item-title {
+  text-transform: uppercase;
+  color: $color-brand-dark;
+  width: 120px;
+  position: relative;
+  top: 8px;
+}
+.status-bar {
+  margin-bottom: 5px;
+  color: $color-grey-very-dark;
+  span {
+    margin-left: 10px;
+  }
+  .mat-icon {
+    font-size: 16px;
+    margin-right: 3px;
+    transform: scaleX(-1);
+    position: relative;
+    left: 10px;
+    color: $color-shuttle-grey;
+    width: auto;
+    height: auto;
+  }
+}
+.mat-checkbox {
+  position: relative;
+  top: 6px;
+  margin-right: 10px;
+}

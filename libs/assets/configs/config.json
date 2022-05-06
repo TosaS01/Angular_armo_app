@@ -1,0 +1,5 @@
+{
+  "backend": "https://dashbe.eudev3.cyberarmorsoft.com",
+  "isOpenIDAuthenticationDefault": true,
+  "refreshIntervalSecondes": 2
+}

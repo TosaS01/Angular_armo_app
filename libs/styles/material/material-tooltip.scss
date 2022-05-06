@@ -1,0 +1,27 @@
+@import "variables";
+
+.mat-tooltip {
+  font-family: $font-normal;
+  font-size: 12px;
+  background-color: black;
+
+  &.base-tooltip {
+    background-color: $color-grey-very-dark;
+  }
+
+  &.size-sm {
+    max-width: 15vw;
+  }
+
+  &.size-md {
+    max-width: 20vw;
+  }
+
+  &.size-lg {
+    max-width: 25vw;
+  }
+
+  &.with-padding {
+    padding: 16px
+  }
+}

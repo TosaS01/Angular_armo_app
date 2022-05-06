@@ -1,0 +1,211 @@
+@import "variables";
+
+.pointer {
+  cursor: pointer;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.vertical-align-middle {
+  vertical-align: middle;
+}
+
+.color-gray {
+  color: $color-grey;
+}
+
+.color-green {
+  color: $color-green;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-black {
+  color: black;
+}
+
+.color-blue-light {
+  color: $color-blue-light;
+}
+
+.color-blue {
+  color: $color-blue;
+}
+
+.color-blue-light {
+  color: $color-blue-light;
+}
+
+.color-pink {
+  color: $color-pink;
+}
+
+.color-spring-green {
+  color: $color-spring-green;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+video {
+  outline: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.underline-section {
+  display: inline-block;
+  flex-grow: 1;
+  height: 24px;
+  border-bottom: 1px solid $color-grey-light;
+}
+
+.font-bold {
+  font-family: $font-bold;
+}
+
+.font-light {
+  font-family: $font-light;
+}
+
+.base-bg {
+  background: #f5f5fa;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.moved {
+  cursor: move;
+
+  * {
+    cursor: move;
+  }
+}
+
+.character-limit {
+  font-size: 12px;
+  color: #7c7f84;
+  text-align: right;
+}
+
+.multiline {
+  white-space: pre-wrap;
+}
+
+.no-events {
+  pointer-events: none;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.base-section-wrapper {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+}
+
+.base-section-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.position-relative {
+  position: relative;
+}
+  
+.bg-pink {
+  background: $color-pink;
+}
+
+.bg-pink-stripe {
+  background-image: repeating-linear-gradient(
+    125deg,
+    $color-pink,
+    $color-pink 1px,
+    $color-pink-light 2px,
+    $color-pink-light 5px
+  );
+}
+
+.bg-blue {
+  background-color: $color-blue;
+}
+
+.bg-blue-stripe {
+  background-image: repeating-linear-gradient(
+    125deg,
+    $color-blue,
+    $color-blue 1px,
+    $color-jordy-blue 2px,
+    $color-jordy-blue 5px
+  );
+}
+
+.bg-blue-light {
+  background-color: $color-blue-light;
+}
+
+.bg-blue-light-stripe {
+  background-image: repeating-linear-gradient(
+    125deg,
+    $color-blue-light,
+    $color-blue-light 1px,
+    $color-cyan-blue 2px,
+    $color-cyan-blue 5px
+  );
+}
+
+.bg-spring-green {
+  background-color: $color-spring-green;
+}
+
+.bg-spring-green-stripe {
+  background-image: repeating-linear-gradient(
+    125deg,
+    $color-spring-green,
+    $color-spring-green 1px,
+    $color-cyan-green 2px,
+    $color-cyan-green 5px
+  );
+}

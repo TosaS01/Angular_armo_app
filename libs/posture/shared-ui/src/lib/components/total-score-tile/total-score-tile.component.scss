@@ -1,0 +1,15 @@
+@import 'variables';
+
+:host {
+  & > div {
+    background: linear-gradient(175.41deg, $color-grey-light 0%, #DFEBFF 100%);
+    box-shadow: 0 1px 0 0 #FFFFFF;
+    border-radius: 10px;
+    line-height: 27px;
+    height: 120px;
+  }
+
+  .score-value {
+    font-size: 54px;
+  }
+}

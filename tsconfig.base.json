@@ -1,0 +1,81 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@armo/auth/api": ["libs/auth/api/src/index.ts"],
+      "@armo/auth/data-access": ["libs/auth/data-access/src/index.ts"],
+      "@armo/auth/feature-login": ["libs/auth/feature-login/src/index.ts"],
+      "@armo/auth/shell": ["libs/auth/shell/src/index.ts"],
+      "@armo/core": ["libs/core/src/index.ts"],
+      "@armo/customers/api": ["libs/customers/api/src/index.ts"],
+      "@armo/customers/data-access": [
+        "libs/customers/data-access/src/index.ts"
+      ],
+      "@armo/customers/domain": ["libs/customers/domain/src/index.ts"],
+      "@armo/dashboard/api": ["libs/dashboard/api/src/index.ts"],
+      "@armo/dashboard/data-access": [
+        "libs/dashboard/data-access/src/index.ts"
+      ],
+      "@armo/dashboard/domain": ["libs/dashboard/domain/src/index.ts"],
+      "@armo/dashboard/feature-home": [
+        "libs/dashboard/feature-home/src/index.ts"
+      ],
+      "@armo/dashboard/shell": ["libs/dashboard/shell/src/index.ts"],
+      "@armo/filters/api": ["libs/filters/api/src/index.ts"],
+      "@armo/filters/data-access": ["libs/filters/data-access/src/index.ts"],
+      "@armo/filters/domain": ["libs/filters/domain/src/index.ts"],
+      "@armo/filters/shared-ui": ["libs/filters/shared-ui/src/index.ts"],
+      "@armo/posture/api": ["libs/posture/api/src/index.ts"],
+      "@armo/posture/data-access": ["libs/posture/data-access/src/index.ts"],
+      "@armo/posture/domain": ["libs/posture/domain/src/index.ts"],
+      "@armo/posture/feature-compliance": [
+        "libs/posture/feature-compliance/src/index.ts"
+      ],
+      "@armo/posture/feature-compliance-details": [
+        "libs/posture/feature-compliance-details/src/index.ts"
+      ],
+      "@armo/posture/feature-overview": [
+        "libs/posture/feature-overview/src/index.ts"
+      ],
+      "@armo/posture/feature-rbac": ["libs/posture/feature-rbac/src/index.ts"],
+      "@armo/posture/feature-vce-report": [
+        "libs/posture/feature-vce-report/src/index.ts"
+      ],
+      "@armo/posture/feature-vulnerabilities": [
+        "libs/posture/feature-vulnerabilities/src/index.ts"
+      ],
+      "@armo/posture/shared-ui": ["libs/posture/shared-ui/src/index.ts"],
+      "@armo/posture/shell": ["libs/posture/shell/src/index.ts"],
+      "@armo/shared": ["libs/shared/src/index.ts"],
+      "@armo/shared-api": ["libs/shared-api/src/index.ts"],
+      "@armo/ui-material": ["libs/ui-material/src/index.ts"],
+      "@armo/util-http": ["libs/util-http/src/index.ts"],
+      "@armo/workloads/api": ["libs/workloads/api/src/index.ts"],
+      "@armo/workloads/data-access": [
+        "libs/workloads/data-access/src/index.ts"
+      ],
+      "@armo/workloads/domain": ["libs/workloads/domain/src/index.ts"],
+      "@armo/workloads/feature-inventory": [
+        "libs/workloads/feature-inventory/src/index.ts"
+      ],
+      "@armo/workloads/feature-visualizer": [
+        "libs/workloads/feature-visualizer/src/index.ts"
+      ],
+      "@armo/workloads/shell": ["libs/workloads/shell/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

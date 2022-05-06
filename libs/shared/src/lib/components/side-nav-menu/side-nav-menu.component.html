@@ -1,0 +1,11 @@
+<nav class="side-nav">
+  <div class="d-flex align-items-center justify-content-between px-4 my-4">
+    <h3 class="m-0" *ngIf="isExpanded">ARMO</h3>
+    <mat-icon class="pointer" (click)="toggleMenu()">menu</mat-icon>
+  </div>
+  <armo-nav-items-list
+    [isMenuExpanded]="isExpanded"
+    [navItems]="sideNavMenuService.sideNavMenuItems$ | async"
+    (toggle)="toggleMenuItem($event)"
+  ></armo-nav-items-list>
+</nav>

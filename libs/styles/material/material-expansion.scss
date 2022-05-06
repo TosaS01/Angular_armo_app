@@ -1,0 +1,32 @@
+.left-expansion-indicator {
+  &.mat-expansion-panel-header {
+    flex-direction: row-reverse;
+  }
+
+  .mat-content {
+    padding-left: 12px;
+    align-items: center;
+  }
+
+  .mat-expansion-indicator {
+    padding-bottom: 4px;
+
+    &::after {
+      border-width: 0 1px 1px 0;
+      padding: 2px;
+    }
+  }
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+div.mat-expansion-panel-header,
+div.mat-expansion-panel-body {
+  padding: 0;
+}
+
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]).cdk-keyboard-focused, .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]).cdk-program-focused, .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
+  background: none;
+}

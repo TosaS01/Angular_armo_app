@@ -1,0 +1,18 @@
+<mat-tab-group
+  [disableRipple]="true"
+  (selectedIndexChange)="onSelectedIndexChange($event)"
+  (selectedTabChange)="onTabChange($event)"
+>
+  <mat-tab *ngFor="let framework of frameworks">
+    <ng-template mat-tab-label>
+      <span class="uppercase">{{ framework }}</span>
+    </ng-template>
+    <armo-framework-data-view
+      [controls]="controls"
+      [resources]="resources"
+      [controlsTotal]="controlsTotal"
+      [resourcesTotal]="resourcesTotal"
+      (changeResourceKind)="onResourceKindChange($event)"
+    ></armo-framework-data-view>
+  </mat-tab>
+</mat-tab-group>

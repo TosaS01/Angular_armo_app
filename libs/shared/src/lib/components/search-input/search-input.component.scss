@@ -1,0 +1,20 @@
+::ng-deep {
+  .mat-form-field {
+    .mat-input-element {
+      font-size: 16px;
+    }
+
+    &.mat-form-field-appearance-outline {
+
+      .mat-form-field-suffix {
+        top: 0.4em;
+      }
+
+    }
+
+    .mat-icon {
+      font-size: 24px;
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+<div class="d-flex item" [ngClass]="vulnerability['severity'] === severityEnumText['Critical'] ? 'border-0' : ''">
+  <mat-checkbox></mat-checkbox>
+  <div class="item-title">
+    {{vulnerability['severity']}} ({{vulnerability['total']}})
+  </div>
+  <div>
+    <div class="status-bar d-flex">
+      <armo-statusbar 
+        [severity]="vulnerability['severity']"
+        [stripeWidth]="totalRelevantWidth" 
+        [solidWidth]="totalWidth"           
+      ></armo-statusbar>
+      <span>{{vulnerability['total']}}</span>
+    </div>
+    <div class="status-bar d-flex">
+      <armo-statusbar 
+        [severity]="vulnerability['severity']"
+        [stripeWidth]="fixedRelevantWidth" 
+        [solidWidth]="fixedTotalWidth"        
+      ></armo-statusbar>
+      <span [ngClass]="getClass(vulnerability['severity'])">{{vulnerability['fixedTotal']}}</span>
+      <mat-icon>build</mat-icon>
+    </div>
+  </div>
+</div>

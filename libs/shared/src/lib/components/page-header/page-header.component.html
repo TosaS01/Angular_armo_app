@@ -1,0 +1,7 @@
+<div class="d-flex align-items-center w-100">
+  <ng-container *ngIf="showBackButton">
+    <armo-back-button class="mr-3"></armo-back-button>
+  </ng-container>
+  <div class="page-title font-bold mr-5">{{ pageTitle }}</div>
+  <ng-content></ng-content>
+</div>

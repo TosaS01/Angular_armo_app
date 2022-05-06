@@ -1,0 +1,45 @@
+<table mat-table [dataSource]="dataSource" matSort>
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+    <td mat-cell *matCellDef="let control">
+      <div class="d-flex align-items-center">
+        <mat-icon class="mr-2" [ngClass]="getStatusIconClass(control.status)">
+          {{ getStatus(control.status).icon }}
+        </mat-icon>
+        <span class="color-gray">{{ getStatus(control.status).name }}</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Control Name</th>
+    <td mat-cell *matCellDef="let control">{{ control.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+    <td mat-cell *matCellDef="let control">{{ control.description }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="affectedResourcesCount">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+      Resources Affected
+    </th>
+    <td mat-cell *matCellDef="let control">
+      {{ control.affectedResourcesCount }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="remediation">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Remediation</th>
+    <td mat-cell *matCellDef="let control">{{ control.remediation }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="install">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+    <td mat-cell *matCellDef="let control"></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

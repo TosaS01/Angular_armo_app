@@ -1,0 +1,10 @@
+<div class="d-flex align-items-center p-4" [ngClass]="{'posture-tile': isPostureScore()}">
+  <div class="font-bold score-value mr-4" [ngStyle]="{'color': getScanScoreColor()}">{{ tile.value }}</div>
+  <div>
+    <div class="font-bold font-size-14">{{ tile.name }} Score</div>
+    <div class="font-size-11">
+      <span>{{ tile.failedControls }}/{{ tile.totalControls }} Controls</span>
+      <span class="color-pink"> Failed</span>
+    </div>
+  </div>
+</div>

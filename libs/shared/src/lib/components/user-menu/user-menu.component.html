@@ -1,0 +1,24 @@
+<div class="d-flex">
+  <div class="user-initials semi-bold pointer" [matMenuTriggerFor]="userMenu">SZ</div>
+</div>
+
+<mat-menu #userMenu=matMenu>
+  <button mat-menu-item [matMenuTriggerFor]="customersMenu">
+    Customers
+  </button>
+  <button mat-menu-item (click)="logOut()">
+    <mat-icon class="mr-2">logout</mat-icon>Logout
+  </button>
+</mat-menu>
+
+<mat-menu #customersMenu="matMenu">
+  <ng-container *ngFor="let customer of customers">
+    <button mat-menu-item (click)="selectCustomer(customer.guid)">
+      {{ customer.name }}
+      <mat-icon
+        *ngIf="isActive(customer.guid)"
+        class="m-0 ml-2 mb-1"
+      >check</mat-icon>
+    </button>
+  </ng-container>
+</mat-menu>

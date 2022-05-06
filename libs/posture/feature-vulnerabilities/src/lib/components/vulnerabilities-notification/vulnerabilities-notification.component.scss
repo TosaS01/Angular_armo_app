@@ -1,0 +1,47 @@
+@import "variables";
+
+:host {
+  div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: -1.5rem -1.5rem 2.125rem;
+    background-color: $color-bg-solid;
+    span {
+      font-size: 16px;
+      font-family: $font-semi-bold;
+      color: $color-grey-very-dark;
+      position: relative;
+      top: -5px;
+      padding-right: 49px;
+      i {
+        font-style: normal;
+        color: $color-pink;
+      }
+      .pinkcircle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $color-pink;
+        background-color: $color-shadow-pink;
+        display: inline-block;
+        margin-right: 13px;
+        position: relative;
+        top: 5px;
+      }
+      .pinkicon {
+        width: 20px;
+        color: $color-pink;
+        margin-right: 19px;
+        position: relative;
+        top: 5px;
+      }
+      .darkicon {
+        width: 20px;
+        color: $color-bg-dark;
+        margin-right: 14px;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+}

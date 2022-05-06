@@ -1,0 +1,148 @@
+@import "variables";
+
+.d3-tip {
+  z-index: 1001;
+  line-height: 1;
+  background: black;
+  color: white;
+  pointer-events: none;
+  max-width: 350px;
+  border-radius: 4px;
+  padding: 8px;
+
+  & > span:not(.indicator) {
+    max-width: 326px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+
+  .order {
+    float: left;
+    margin-right: 4px;
+  }
+
+  /* Creates a small triangle extender for the tooltip */
+  &:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 20px;
+    width: 100%;
+    line-height: 1;
+    color: black;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  /* Northward tooltips */
+  &.n:after {
+    content: "\25BE";
+    margin: -7px 0 0 0;
+    top: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  /* Eastward tooltips */
+  &.e:after {
+    content: "\25C2";
+    margin: -10px 0px 0 -3px;
+    top: 50%;
+    left: -8px;
+  }
+
+  /* Southward tooltips */
+  &.s:after {
+    content: "\25B4";
+    margin: -5px 0 1px 0;
+    top: -8px;
+    left: 0;
+    text-align: center;
+  }
+
+  /* Westward tooltips */
+  &.w:after {
+    content: "\25B8";
+    margin: -10px 0px 0 -5px;
+    top: 50%;
+    left: 100%;
+  }
+
+  /* South-westward tooltips */
+  &.sw:after {
+    content: "\25B4";
+    margin: -5px 0 1px 0;
+    top: -8px;
+    left: 0;
+    text-align: right;
+  }
+
+  &.nw:after {
+    content: "\25BE";
+    margin: -7px 0 0 0;
+    top: 100%;
+    left: 0;
+    text-align: right;
+  }
+}
+
+.custom-tooltip {
+  .tooltip-inner-wrapper {
+    background: black;
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+
+    &:after {
+      border: 6px solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+  }
+
+  &.ct-top {
+    .tooltip-inner-wrapper:after {
+      top: 100%;
+      left: 50%;
+      border-top-color: black;
+      margin-left: -6px;
+    }
+  }
+
+  &.ct-bottom {
+    .tooltip-inner-wrapper:after {
+      bottom: 100%;
+      left: 50%;
+      border-bottom-color: black;
+      margin-left: -6px;
+    }
+  }
+
+  &.ct-left {
+    .tooltip-inner-wrapper:after {
+      bottom: calc(50% - 6px);
+      left: 100%;
+      border-left-color: black;
+    }
+  }
+
+  &.ct-right {
+    .tooltip-inner-wrapper:after {
+      bottom: calc(50% - 6px);
+      right: 100%;
+      border-right-color: black;
+      margin-left: -12px;
+    }
+  }
+}
+
+.tooltip-light {
+  background: rgba(97, 97, 97, 0.9);
+  height: 24px;
+  font-size: 10px;
+  line-height: 11px;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;;
+}

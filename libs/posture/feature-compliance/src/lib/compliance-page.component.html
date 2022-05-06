@@ -1,0 +1,9 @@
+<armo-page-header [pageTitle]="'Compliance'"> </armo-page-header>
+<div class="d-flex justify-content-between mt-4">
+  <armo-search-input [placeholder]="'Search'"
+                     (search)="onSearch($event)"
+  ></armo-search-input>
+<!--  <div>Download CSV button</div>-->
+</div>
+<armo-clusters-overtime-list [clustersOvertime]="clustersOvertimeFacade.clustersOvertime$ | async">
+</armo-clusters-overtime-list>

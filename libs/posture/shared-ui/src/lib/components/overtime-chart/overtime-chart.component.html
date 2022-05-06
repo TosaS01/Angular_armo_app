@@ -1,0 +1,10 @@
+<div *ngIf="!!chartTitle" class="font-bold mb-2">{{ chartTitle }}</div>
+<ng-container *ngIf="chartData?.data">
+  <google-chart [type]="chartData.type"
+                [data]="chartData.data"
+                [options]="chartData.options"
+                [height]="chartData.height"
+                [width]="chartData.width"
+  ></google-chart>
+</ng-container>
+

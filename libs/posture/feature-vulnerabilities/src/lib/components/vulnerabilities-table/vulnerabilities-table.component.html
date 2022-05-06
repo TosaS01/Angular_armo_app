@@ -1,0 +1,118 @@
+<div class="title mb-3">
+  <div class="float-left filter-title semi-bold">Results (300/300)</div>
+  <div class="float-right d-flex filter-item font-bold color-blue">
+    <div>
+      <mat-icon>save_alt</mat-icon>
+      Download CSV
+    </div>    
+  </div>
+</div>
+<div class="d-flex">
+  <table mat-table [dataSource]="dataSource" matSort>    
+
+    <ng-container matColumnDef="mark">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <label class="pinkcircle"></label>
+        <mat-icon class="pinkicon">report_problem</mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="scan-time">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Scan Time</th>
+      <td mat-cell *matCellDef="let element">{{ element.scanTime | date:'MM-dd-YYYY HH:mm:ss' }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+      <td mat-cell *matCellDef="let element">
+        <span class="status color-blue semi-bold">{{ element.status }}</span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="wlid">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Wlid</th>
+      <td mat-cell *matCellDef="let element">
+        <div class="wlid" [title]="element.wlid">{{ element.wlid }}</div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cont">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cont.</th>
+      <td mat-cell *matCellDef="let element">{{ element.container }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="reg">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Reg.</th>
+      <td mat-cell *matCellDef="let element">{{ element.registry }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="image-tag">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Image Tag</th>
+      <td mat-cell *matCellDef="let element">{{ element.imageTag }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="critical">
+      <th mat-header-cell *matHeaderCellDef>Critical</th>
+      <td mat-cell *matCellDef="let element">
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Critical']), getZeroClass(element['severitiesSum'][vulnerabilitySeverityEnum['Critical']])]">
+          {{ element['severitiesSum'][vulnerabilitySeverityEnum['Critical']] }}
+        </span>
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Critical']), getZeroClass(element['relevanciesSum'][vulnerabilitySeverityEnum['Critical']])]">
+          {{ element['relevanciesSum'][vulnerabilitySeverityEnum['Critical']] }}
+        </span>
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Critical']), getZeroClass(element['fixAvailbleSum'][vulnerabilitySeverityEnum['Critical']])]">
+          {{ element['fixAvailbleSum'][vulnerabilitySeverityEnum['Critical']] }}
+        </span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="high">
+      <th mat-header-cell *matHeaderCellDef>High</th>
+      <td mat-cell *matCellDef="let element">
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['High']), getZeroClass(element['severitiesSum'][vulnerabilitySeverityEnum['High']])]">
+          {{ element['severitiesSum'][vulnerabilitySeverityEnum['High']] }}
+        </span>
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['High']), getZeroClass(element['relevanciesSum'][vulnerabilitySeverityEnum['High']])]">
+          {{ element['relevanciesSum'][vulnerabilitySeverityEnum['High']] }}
+        </span>
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['High']), getZeroClass(element['fixAvailbleSum'][vulnerabilitySeverityEnum['High']])]">
+          {{ element['fixAvailbleSum'][vulnerabilitySeverityEnum['High']] }}
+        </span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="med">
+      <th mat-header-cell *matHeaderCellDef>Med.</th>
+      <td mat-cell *matCellDef="let element">
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Medium']), getZeroClass(element['severitiesSum'][vulnerabilitySeverityEnum['Medium']])]">
+          {{ element['severitiesSum'][vulnerabilitySeverityEnum['Medium']] }}
+        </span>
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Medium']), getZeroClass(element['relevanciesSum'][vulnerabilitySeverityEnum['Medium']])]">
+          {{ element['relevanciesSum'][vulnerabilitySeverityEnum['Medium']] }}
+        </span>
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Medium']), getZeroClass(element['fixAvailbleSum'][vulnerabilitySeverityEnum['Medium']])]">
+          {{ element['fixAvailbleSum'][vulnerabilitySeverityEnum['Medium']] }}
+        </span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="low">
+      <th mat-header-cell *matHeaderCellDef>Low</th>
+      <td mat-cell *matCellDef="let element">
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Low']), getZeroClass(element['severitiesSum'][vulnerabilitySeverityEnum['Low']])]">
+          {{ element['severitiesSum'][vulnerabilitySeverityEnum['Low']] }}
+        </span>
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Low']), getZeroClass(element['relevanciesSum'][vulnerabilitySeverityEnum['Low']])]">
+          {{ element['relevanciesSum'][vulnerabilitySeverityEnum['Low']] }}
+        </span>
+        <span [ngClass]="['sum', getColorClass(vulnerabilityTextEnum['Low']), getZeroClass(element['fixAvailbleSum'][vulnerabilitySeverityEnum['Low']])]">
+          {{ element['fixAvailbleSum'][vulnerabilitySeverityEnum['Low']] }}
+        </span>
+      </td>
+    </ng-container>   
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

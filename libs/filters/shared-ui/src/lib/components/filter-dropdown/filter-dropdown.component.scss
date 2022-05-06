@@ -1,0 +1,47 @@
+@import 'variables';
+
+::ng-deep {
+  .filters-menu.mat-menu-panel {
+    min-width: 400px;
+  }
+
+  ul {
+    li {
+      height: 48px;
+
+      &.selected {
+        font-family: $font-semi-bold;
+        color: #000000;
+
+        .mat-checkbox-label {
+          font-family: $font-semi-bold;
+          color: #000000;
+        }
+      }
+
+      &:hover {
+        background-color: rgba(5,61,161,0.03);
+
+        .mat-checkbox-label {
+          font-family: $font-semi-bold;
+          color: $color-blue;
+        }
+      }
+
+      .mat-checkbox-label {
+        color: $color-grey-very-dark;
+      }
+    }
+  }
+}
+
+.selected-filters-badge {
+  color: #ffffff;
+  background-color: $color-blue;
+  text-align: center;
+  border-radius: 12px;
+  padding: 0 8px;
+  height: 24px;
+  line-height: 24px;
+}
+

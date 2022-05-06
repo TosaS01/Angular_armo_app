@@ -1,0 +1,85 @@
+@font-face {
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-Regular.eot);
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-Regular.eot?#iefix)
+      format("embedded-opentype"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Regular.woff2) format("woff2"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Regular.woff) format("woff"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Regular.ttf)
+      format("truetype");
+  font-family: "OpenSans";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-SemiBold.eot);
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-SemiBold.eot?#iefix)
+      format("embedded-opentype"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-SemiBold.woff) format("woff"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Semibold.ttf)
+      format("truetype");
+  font-family: "OpenSans-SemiBold";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-Bold.eot);
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-Bold.eot?#iefix)
+      format("embedded-opentype"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Bold.woff) format("woff"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Bold.ttf) format("truetype");
+  font-family: "OpenSans-Bold";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-ExtraBold.eot);
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-ExtraBold.eot?#iefix)
+      format("embedded-opentype"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-ExtraBold.woff) format("woff"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-ExtraBold.ttf)
+      format("truetype");
+  font-family: "OpenSans-ExtraBold";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-Italic.eot);
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-Italic.eot?#iefix)
+      format("embedded-opentype"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Italic.woff2) format("woff2"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Italic.woff) format("woff"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Italic.ttf) format("truetype");
+  font-family: "OpenSans-Italic";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-BoldItalic.eot);
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-BoldItalic.eot?#iefix)
+      format("embedded-opentype"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-BoldItalic.woff2)
+      format("woff2"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-BoldItalic.woff)
+      format("woff"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-BoldItalic.ttf)
+      format("truetype");
+  font-family: "OpenSans-BoldItalic";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-Light.eot);
+  src: url(/armo-app/assets/fonts/open-sans/OpenSans-Light.eot?#iefix)
+      format("embedded-opentype"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Light.woff) format("woff"),
+    url(/armo-app/assets/fonts/open-sans/OpenSans-Light.ttf) format("truetype");
+  font-family: "OpenSans-Light";
+  font-weight: normal;
+  font-style: normal;
+}

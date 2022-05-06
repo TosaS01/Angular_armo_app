@@ -1,0 +1,8 @@
+<div class="score-tiles-container pb-4 pr-4">
+  <ng-content></ng-content>
+  <ng-container *ngFor="let tile of tiles; let index = index;">
+    <armo-score-tile
+      [tileIndex]="index"
+      [tile]="tile"></armo-score-tile>
+  </ng-container>
+</div>
